@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ui-kit</title>
+
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/nouislider.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="css/air-datepicker.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script defer src="js/placeholde_hover.js"></script>
+  <script defer src="js/Dropdown.js"></script>
+  <script defer src="js/Guest.js"></script>
+  <script defer src="https://unpkg.com/imask"></script>
+  <script defer src="js/Date_masked.js"></script>
+  <script defer src="js/Like.js"></script>
+  <script defer src="js/nouislider.js"></script>
+  <script defer src="js/Range.js"></script>
+  <script defer src="js/pagination.js"></script>
+  <script defer src="js/room.js"></script>
+  <script defer src="js/air-datepicker.js"></script>
+  <script defer src="js/air-datepicker-confing.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="js/swiper.js"></script>
+</head>
+
+<body>
+  <div class="ui">
+    <div class="ui-kit">
+      <div class="box">
+        <div class="input-text input">
+          <lebel class="input__fileld">
+            <h3 class="input__label heading">text field</h3>
+            <input type="email" name="email" placeholder="Email" class="input__text input__border text email">
+          </lebel>
+        </div>
+
+        <div class="input-guest guest input">
+          <h3 class="input__label heading">dropdown</h3>
+          <button class="dropdown input__border text js-dropdown-guest">
+            <span class="js-guest-value">Cколько гостей</span>
+            <span class="dropdown__icon"><svg width="13" height="8" viewbox="0 0 13 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                  fill="#1F2041" fill-opacity="0.5" />
+              </svg></span>
+          </button>
+          <div class="guest__dropdown js-guest">
+            <div class="guest__amount">
+              <h3 class="guest__age heading">взрослые</h3>
+              <div class="guest__option">
+                <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus">-</button>
+                <input class="guest__value heading" value="0" data-value="guest" readonly="readonly">
+                <button class="guest__btn_right value__btn js-btn-plus">+</button>
+              </div>
+            </div>
+            <div class="guest__amount">
+              <h3 class="guest__age heading">дети</h3>
+              <div class="guest__option">
+                <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus" type="button">-</button>
+                <input class="guest__value heading" value="0" data-value="guest" readonly="readonly">
+                <button class="guest__btn_right value__btn js-btn-plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="guest__amount">
+              <h3 class="guest__age heading">младенцы</h3>
+              <div class="guest__option">
+                <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus" type="button">-</button>
+                <input class="guest__value heading" value="0" data-value="children" readonly="readonly">
+                <button class="guest__btn_right value__btn js-btn-plus" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="guest__buttons">
+              <button class="guest__clear heading btn__text js-clear btn__text_not-active" id="js-clear">очистить</button>
+              <button class="guest__apply heading btn__text js-apply">применить</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-masked input">
+          <lebel class="input__fileld">
+            <h3 class="input__label heading ">masked text field</h3>
+            <input type="text" name="date" id="input__date" placeholder="ДД.ММ.ГГГГ"
+              class="input__date input__border text">
+          </lebel>
+        </div>
+
+        <div class="filter-date">
+          <div class="filter-date-dropdown filter-date-dropdown_before input__small input">
+            <h3 class="input__label heading">date dropdown</h3>
+            <input class="dropdown input__date input__border text js-dropdown-date-before" value="ДД.ММ.ГГГГ"
+              name="дата пребывания" readonly="readonly">
+            <div class="filter-date__datepicker js-datepicker-date-before">
+            </div>
+          </div>
+
+          <div class="filter-date-dropdown filter-date-dropdown_after input__small input">
+            <h3 class="input__label heading">date dropdown</h3>
+            <input class="dropdown input__date input__border text js-dropdown-date-after" value="ДД.ММ.ГГГГ"
+              name="дата пребывания" readonly="readonly">
+            <div class="filter-date__datepicker js-datepicker-date-after">
+            </div>
+          </div>
+        </div>
+
+        <div class="input-date-dropdown input__medium input">
+          <h3 class="input__label heading">date dropdown</h3>
+          <input class="dropdown input__date input__border text js-dropdown-date-range" value="ДД.ММ.ГГГГ"
+            name="дата пребывания" readonly="readonly">
+          <div class="input-date__datepicker js-datepicker-date-range">
+          </div>
+        </div>
+
+        <div class="input-subscription input__medium input">
+          <div class="input__fileld">
+            <h3 class="input__label heading ">subscription text field</h3>
+            <form action="#" autocomplete class="input-subscription__form">
+              <input type="email" name="email" placeholder="Email"
+                class="input__text input__border input__email_icon text">
+              <button class="input__email_icon"></button>
+            </form>
+          </div>
+        </div>
+
+
+        <div class="input-rooms input__medium rooms input">
+          <h3 class="input__label heading ">dropdown</h3>
+          <button class="dropdown input__border text js-dropdown-rooms">
+            <span class="js-rooms-value">спальни, кровати, ...</span>
+            <span class="dropdown__icon"><svg width="13" height="8" viewbox="0 0 13 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                  fill="#1F2041" fill-opacity="0.5" />
+              </svg></span>
+          </button>
+          <div class="rooms__dropdown js-rooms">
+            <div class="rooms__amount">
+              <h3 class="rooms__age heading">спальни</h3>
+              <div class="rooms__option">
+                <button class="rooms__btn_left value__btn value__btn_not-active js-btn-minus">-</button>
+                <input class="rooms__value heading js-input-bedroom" value="0" readonly="readonly">
+                <button class="rooms__btn_right value__btn js-btn-plus">+</button>
+              </div>
+            </div>
+            <div class="rooms__amount">
+              <h3 class="rooms__age heading">кровати</h3>
+              <div class="rooms__option">
+                <button class="rooms__btn_left value__btn value__btn_not-active js-btn-minus" type="button">-</button>
+                <input class="rooms__value heading js-input-beds" value="0" readonly="readonly">
+                <button class="rooms__btn_right value__btn js-btn-plus" type="button">+</button>
+              </div>
+            </div>
+            <div class="rooms__amount">
+              <h3 class="rooms__age heading">ванные комнаты</h3>
+              <div class="rooms__option">
+                <button class="rooms__btn_left value__btn value__btn_not-active js-btn-minus" type="button">-</button>
+                <input class="rooms__value heading js-input-bathrooms" value="0" readonly="readonly">
+                <button class="rooms__btn_right value__btn js-btn-plus" type="button">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown-checkbox input__medium">
+          <button class="dropdown js-dropdown-checkbox">
+            <h3 class="dropdown-checkbox__heading heading">expandable checkbox list</h3>
+            <span class="dropdown__icon dropdown-checkbox__icon"><svg width="13" height="8" viewbox="0 0 13 8"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                  fill="#1F2041" fill-opacity="0.5" />
+              </svg></span>
+          </button>
+          <ul class="dropdown-checkbox__list js-checkbox">
+            <li class="dropdown-checkbox__item">
+              <input type="checkbox" name="checkbox-1" id="checkbox-1" class="dropdown-checkbox__checkbox">
+              <label for="checkbox-1" class="dropdown-checkbox__label text">
+                Завтрак
+              </label>
+            </li>
+            <li class="dropdown-checkbox__item">
+              <input type="checkbox" name="checkbox-2" id="checkbox-2" class="dropdown-checkbox__checkbox">
+              <label for="checkbox-2" class="dropdown-checkbox__label text">
+                Письменный стол
+              </label>
+            </li>
+            <li class="dropdown-checkbox__item"><input type="checkbox" name="checkbox-3" id="checkbox-3"
+                class="dropdown-checkbox__checkbox">
+              <label for="checkbox-3" class="dropdown-checkbox__label text">
+                Стул для кормления
+              </label>
+            </li>
+            <li class="dropdown-checkbox__item">
+              <input type="checkbox" name="checkbox-4" id="checkbox-4" class="dropdown-checkbox__checkbox">
+              <label for="checkbox-4" class="dropdown-checkbox__label text">
+                Кроватка
+              </label>
+            </li>
+            <li class="dropdown-checkbox__item">
+              <input type="checkbox" name="checkbox-5" id="checkbox-5" class="dropdown-checkbox__checkbox">
+              <label for="checkbox-5" class="dropdown-checkbox__label text">
+                Телевизор
+              </label>
+            </li>
+            <li class="dropdown-checkbox__item">
+              <input type="checkbox" name="checkbox-6" id="checkbox-6" class="dropdown-checkbox__checkbox">
+              <label for="checkbox-6" class="dropdown-checkbox__label text">
+                Шампунь
+              </label>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="advantages input__medium">
+          <svg class="advantages__img" width="40" height="40" viewbox="0 0 40 40" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M26.1875 29.0938C24.375 30.3438 22.3125 30.9688 20 30.9688C17.6875 30.9688 15.5938 30.3438 13.7188 29.0938C11.9062 27.7812 10.5938 26.0938 9.78125 24.0312H30.2188C29.4062 26.0938 28.0625 27.7812 26.1875 29.0938ZM15.0312 17.1875C14.4688 17.75 13.7812 18.0312 12.9688 18.0312C12.1562 18.0312 11.4375 17.75 10.8125 17.1875C10.25 16.5625 9.96875 15.8438 9.96875 15.0312C9.96875 14.2188 10.25 13.5312 10.8125 12.9688C11.4375 12.3438 12.1562 12.0312 12.9688 12.0312C13.7812 12.0312 14.4688 12.3438 15.0312 12.9688C15.6562 13.5312 15.9688 14.2188 15.9688 15.0312C15.9688 15.8438 15.6562 16.5625 15.0312 17.1875ZM29.0938 17.1875C28.5312 17.75 27.8438 18.0312 27.0312 18.0312C26.2188 18.0312 25.5 17.75 24.875 17.1875C24.3125 16.5625 24.0312 15.8438 24.0312 15.0312C24.0312 14.2188 24.3125 13.5312 24.875 12.9688C25.5 12.3438 26.2188 12.0312 27.0312 12.0312C27.8438 12.0312 28.5312 12.3438 29.0938 12.9688C29.7188 13.5312 30.0312 14.2188 30.0312 15.0312C30.0312 15.8438 29.7188 16.5625 29.0938 17.1875ZM8.65625 31.3438C11.8438 34.4688 15.625 36.0312 20 36.0312C24.375 36.0312 28.125 34.4688 31.25 31.3438C34.4375 28.1562 36.0312 24.375 36.0312 20C36.0312 15.625 34.4375 11.875 31.25 8.75C28.125 5.5625 24.375 3.96875 20 3.96875C15.625 3.96875 11.8438 5.5625 8.65625 8.75C5.53125 11.875 3.96875 15.625 3.96875 20C3.96875 24.375 5.53125 28.1562 8.65625 31.3438ZM5.84375 5.9375C9.78125 2 14.5 0.03125 20 0.03125C25.5 0.03125 30.1875 2 34.0625 5.9375C38 9.8125 39.9688 14.5 39.9688 20C39.9688 25.5 38 30.2188 34.0625 34.1562C30.1875 38.0312 25.5 39.9688 20 39.9688C14.5 39.9688 9.78125 38.0312 5.84375 34.1562C1.96875 30.2188 0.03125 25.5 0.03125 20C0.03125 14.5 1.96875 9.8125 5.84375 5.9375Z"
+              fill="url(#paint0_linear_18447_103)" />
+            <defs>
+              <lineargradient id="paint0_linear_18447_103" x1="20" y1="-4" x2="20" y2="44"
+                gradientunits="userSpaceOnUse">
+                <stop stop-color="#BC9CFF" />
+                <stop offset="1" stop-color="#8BA4F9" />
+              </lineargradient>
+            </defs>
+          </svg>
+          <div class="advantages__content">
+            <h4 class="advantages__heading subject">
+              Комфорт
+            </h4>
+            <p class="advantages__text text">
+              Шумопоглощающие стены
+            </p>
+          </div>
+        </div>
+
+        <div class="advantages input__medium">
+          <svg class="advantages__img" width="36" height="38" viewbox="0 0 36 38" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M31.9688 26V21.9688H28.0312V26H31.9688ZM31.9688 33.9688V30.0312H28.0312V33.9688H31.9688ZM19.9688 9.96875V6.03125H16.0312V9.96875H19.9688ZM19.9688 18.0312V14H16.0312V18.0312H19.9688ZM19.9688 26V21.9688H16.0312V26H19.9688ZM19.9688 33.9688V30.0312H16.0312V33.9688H19.9688ZM7.96875 18.0312V14H4.03125V18.0312H7.96875ZM7.96875 26V21.9688H4.03125V26H7.96875ZM7.96875 33.9688V30.0312H4.03125V33.9688H7.96875ZM24 18.0312H36V38H0V9.96875H12V6.03125L18 0.03125L24 6.03125V18.0312Z"
+              fill="url(#paint0_linear_18447_106)" />
+            <defs>
+              <lineargradient id="paint0_linear_18447_106" x1="18" y1="-4" x2="18" y2="44"
+                gradientunits="userSpaceOnUse">
+                <stop stop-color="#BC9CFF" />
+                <stop offset="1" stop-color="#8BA4F9" />
+              </lineargradient>
+            </defs>
+          </svg>
+          <div class="advantages__content">
+            <h4 class="advantages__heading subject">
+              Удобство
+            </h4>
+            <p class="advantages__text text">
+              Окно в каждой из спален
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="checkbox-buttons">
+          <h3 class="checkbox-buttons__heading heading">checkbox buttons</h3>
+          <ul class="checkbox-buttons__list">
+            <li class="checkbox-buttons__item">
+              <input type="checkbox" name="checkbox-1" id="checkbox-buttons-1" class="checkbox-buttons__checkbox">
+              <label for="checkbox-buttons-1" class="checkbox-buttons__label text">
+                Можно курить
+              </label>
+            </li>
+            <li class="checkbox-buttons__item">
+              <input type="checkbox" name="checkbox-2" id="checkbox-buttons-2" class="checkbox-buttons__checkbox">
+              <label for="checkbox-buttons-2" class="checkbox-buttons__label text">
+                Можно с питомцами
+              </label>
+            </li>
+            <li class="checkbox-buttons__item"><input type="checkbox" name="checkbox-3" id="checkbox-buttons-3"
+                class="checkbox-buttons__checkbox">
+              <label for="checkbox-buttons-3" class="checkbox-buttons__label text">
+                Можно пригласить гостей (до 10 человек)
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="radio-buttons">
+          <h3 class="radio-buttons__heading heading">radio buttons</h3>
+          <ul class="radio-buttons__list">
+            <li class="radio-buttons__item">
+              <input type="radio" name="gender" id="radio-buttons-1" class="radio-buttons__radio" checked="checked"
+                value="man">
+              <label for="radio-buttons-1" class="radio-buttons__label text">
+                Мужчина
+              </label>
+            </li>
+            <li class="radio-buttons__item">
+              <input type="radio" name="gender" id="radio-buttons-2" class="radio-buttons__radio" value="woman">
+              <label for="radio-buttons-2" class="radio-buttons__label text">
+                Женщина
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="toggle">
+          <h3 class="toggle__heading heading">toggle</h3>
+          <ul class="toggle__list">
+            <li class="toggle__item">
+              <input type="checkbox" name="Получать спецпредложения" id="toggle-1" class="toggle__checkbox"
+                checked="checked">
+              <label for="toggle-1" class="toggle__label text">
+                Получать спецпредложения
+              </label>
+            </li>
+            <li class="toggle__item">
+              <input type="checkbox" name="Получать спецпредложения" id="toggle-2" class="toggle__checkbox">
+              <label for="toggle-2" class="toggle__label text">
+                Получать спецпредложения
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="like-buttons">
+          <h3 class="like-buttons__heading heading">like buttons</h3>
+          <div class="like-buttons__list">
+            <div class="like-buttons__item js-like">
+              <input type="checkbox" class="like-buttons__checkbox js-like-input">
+              <span class="like-buttons__label js-like-counter">
+                2
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rate-buttons">
+          <h3 class="rate-buttons__heading heading">rate button</h3>
+          <div class="rate-buttons__list">
+            <input type="radio" name="rating" id="rating-5" class="rate-buttons__item">
+            <label for="rating-5" class="rate-buttons__icon"></label>
+            <input type="radio" name="rating" id="rating-4" checked class="rate-buttons__item">
+            <label for="rating-4" class="rate-buttons__icon"></label>
+            <input type="radio" name="rating" id="rating-3" class="rate-buttons__item">
+            <label for="rating-3" class="rate-buttons__icon"></label>
+            <input type="radio" name="rating" id="rating-2" class="rate-buttons__item">
+            <label for="rating-2" class="rate-buttons__icon"></label>
+            <input type="radio" name="rating" id="rating-1" class="rate-buttons__item">
+            <label for="rating-1" class="rate-buttons__icon"></label>
+          </div>
+        </div>
+
+        <div class="rich-checkbox">
+          <h3 class="rich-checkbox__heading heading">rich Checkbox Buttons</h3>
+          <ul class="rich-checkbox__list">
+            <li class="rich-checkbox__item">
+              <input type="checkbox" name="checkbox-1" id="rich-checkbox-1" class="rich-checkbox__checkbox">
+              <label for="rich-checkbox-1" class="rich-checkbox__label subject">
+                Можно курить
+                <p class="rich-checkbox__description text">Ширина коридоров в номере не менее 91 см.</p>
+              </label>
+            </li>
+            <li class="rich-checkbox__item">
+              <input type="checkbox" name="checkbox-2" id="rich-checkbox-2" class="rich-checkbox__checkbox">
+              <label for="rich-checkbox-2" class="rich-checkbox__label subject">
+                Помощник для инвалидов
+              </label>
+              <p class="rich-checkbox__description text">На 1 этаже вас встретит специалист и проводит до номера.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="range">
+          <div class="range__title">
+            <h3 class="range__heading heading ">диапазон цены</h3>
+            <div class="range__price">
+              <input type="text" class="range__from js-range-from">
+              <span>₽</span>
+              <span class="range__dash">-</span>
+              <input type="text" class="range__from js-range-to">
+              <span>₽</span>
+            </div>
+          </div>
+          <div class="range__wrapper" id="slider">
+          </div>
+        </div>
+
+        <div class="buttons-btn">
+          <h3 class="btn__heading heading">Buttons</h3>
+          <button class="btn btn__color_test btn__color heading">CLICK ME</button>
+          <button class="btn btn__transparent btn__transparent_test heading">CLICK ME</button>
+          <button class="btn btn__text btn__text_test heading">CLICK ME</button>
+          <button class="btn btn__color btn__color_long heading">перейти к оплате</button>
+        </div>
+
+        <div class="pagination">
+          <h3 class="pagination__heading heading">pagination</h3>
+          <!-- <div class="pagination__posts"></div> -->
+          <ul class="pagination__list">
+          </ul>
+          <p class="pagination__text text">
+            1 – 12 из 100+ вариантов аренды
+          </p>
+        </div>
+
+        <div class="bullet">
+          <h3 class="bullet__heading heading">bullet list</h3>
+          <ul class="bullet__list">
+            <li class="bullet__item text">Нельзя с питомцами</li>
+            <li class="bullet__item text">Без вечеринок и мероприятий</li>
+            <li class="bullet__item text">Время прибытия — после 13:00,
+              а выезд до 12:00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-commnet">
+      <div class="comment">
+        <div class="comment__user">
+          <img src="https://www.purina.pt/sites/default/files/2021-02/BREED%20Hero_0100_pug.jpg" alt="avatar"
+            class="comment__img">
+          <div class="comment__info">
+            <div class="comment__name subject">
+              Мурад Сарафанов
+            </div>
+            <div class="commnet__days text">
+              5 дней назад
+            </div>
+          </div>
+        </div>
+        <div class="comment__desc">
+          <div class="like-buttons__item comment__like js-like">
+            <input type="checkbox" class="like-buttons__checkbox js-like-input" checked>
+            <span class="like-buttons__label js-like-counter">
+              12
+            </span>
+          </div>
+          <p class="comment__text text">
+            Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно,
+            шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-ui">
+      <div class="ui-kit">
+        <div class="box">
+          <div class="search cards-block mb40">
+            <div class="search__header">
+              <h1 class="search__title title">Найдём номера под ваши пожелания</h1>
+            </div>
+            <form action="#" class="search__form">
+              <div class="search__filter-date filter-date">
+                <div class="filter-date-dropdown filter-date-dropdown_before input__small input">
+                  <h3 class="input__label heading">прибытие</h3>
+                  <input class="dropdown input__date input__border text js-dropdown-date-before" value="ДД.ММ.ГГГГ"
+                    name="дата пребывания" readonly="readonly">
+                  <div class="filter-date__datepicker js-datepicker-date-before">
+                  </div>
+                </div>
+
+                <div class="filter-date-dropdown filter-date-dropdown_after input__small input">
+                  <h3 class="input__label heading">выезд</h3>
+                  <input class="dropdown input__date input__border text js-dropdown-date-after" value="ДД.ММ.ГГГГ"
+                    name="дата пребывания" readonly="readonly">
+                  <div class="filter-date__datepicker js-datepicker-date-after">
+                  </div>
+                </div>
+              </div>
+
+              <div class="search__guest input-guest guest input">
+                <h3 class="input__label heading">гости</h3>
+                <button class="dropdown input__border text js-dropdown-guest">
+                  <span class="js-guest-value">Cколько гостей</span>
+                  <span class="dropdown__icon"><svg width="13" height="8" viewbox="0 0 13 8" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                        fill="#1F2041" fill-opacity="0.5" />
+                    </svg></span>
+                </button>
+                <div class="guest__dropdown js-guest">
+                  <div class="guest__amount">
+                    <h3 class="guest__age heading">взрослые</h3>
+                    <div class="guest__option">
+                      <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus">-</button>
+                      <input class="guest__value heading" value="0" data-value="guest" readonly="readonly">
+                      <button class="guest__btn_right value__btn js-btn-plus">+</button>
+                    </div>
+                  </div>
+                  <div class="guest__amount">
+                    <h3 class="guest__age heading">дети</h3>
+                    <div class="guest__option">
+                      <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus"
+                        type="button">-</button>
+                      <input class="guest__value heading" value="0" data-value="guest" readonly="readonly">
+                      <button class="guest__btn_right value__btn js-btn-plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <div class="guest__amount">
+                    <h3 class="guest__age heading">младенцы</h3>
+                    <div class="guest__option">
+                      <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus"
+                        type="button">-</button>
+                      <input class="guest__value heading" value="0" data-value="children" readonly="readonly">
+                      <button class="guest__btn_right value__btn js-btn-plus" type="button">+</button>
+                    </div>
+                  </div>
+
+                  <div class="guest__buttons">
+                    <button class="guest__clear heading btn__text js-clear btn__text_not-active">очистить</button>
+                    <button class="guest__apply heading btn__text js-apply">применить</button>
+                  </div>
+                </div>
+              </div>
+
+              <button class="search__btn btn btn__color btn__color_long heading">подобрать номер</button>
+            </form>
+          </div>
+
+          <div class="registration cards-block mb40">
+            <h1 class="registration__title title">Регистрация аккаунта</h1>
+            <form action="#" class="registration__form">
+
+              <input type="text" name="name" placeholder="Имя"
+                class="input__text input__border registration__input text">
+
+              <input type="text" name="surnsme" placeholder="Фамилия"
+                class="input__text input__border registration__input text">
+
+              <ul class="radio-buttons__list registration__input_margin">
+                <li class="radio-buttons__item">
+                  <input type="radio" name="gender" id="radio-man" class="radio-buttons__radio" checked="checked"
+                    value="man">
+                  <label for="radio-man" class="radio-buttons__label text">
+                    Мужчина
+                  </label>
+                </li>
+                <li class="radio-buttons__item">
+                  <input type="radio" name="gender" id="radio-woman" class="radio-buttons__radio" value="woman">
+                  <label for="radio-woman" class="radio-buttons__label text">
+                    Женщина
+                  </label>
+                </li>
+              </ul>
+
+              <lebel class="input__fileld">
+                <h3 class="input__label heading ">дата рождения</h3>
+                <input type="text" name="date" id="input__date" placeholder="ДД.ММ.ГГГГ"
+                  class="input__date input__border registration__input_margin text">
+              </lebel>
+
+              <lebel class="input__fileld">
+                <h3 class="input__label heading">данные для входа в сервис</h3>
+                <input type="email" name="email" placeholder="Email"
+                  class="input__text input__border text registration__input">
+              </lebel>
+              <input type="password" name="password" placeholder="Пароль"
+                class="input__text input__border registration__input text">
+
+              <div class="registration__input_margin registration__toggle">
+                <input type="checkbox" name="Получать спецпредложения" id="get" class="toggle__checkbox "
+                  checked="checked">
+                <label for="get" class="toggle__label text">
+                  Получать спецпредложения
+                </label>
+              </div>
+
+              <button class="btn btn__color btn__color_long heading registration__btn">перейти к оплате</button>
+            </form>
+
+            <div class="registration__footer">
+              <p class="registration__text">Уже есть аккаунт на Toxin</p>
+              <button class="btn btn__transparent heading">войти</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="search cards-block mb40">
+            <div class="search__header">
+              <div class="search-header__left">
+                <h2 class="search-header__title subtitle"><span class="search-header__num subtitle">№</span> 888</h2>
+                <h3 class="search-header__heading heading">люкс</h3>
+              </div>
+              <div class="search-header__right">
+                <p class="search-header__price search-header__price_small text">
+                  <strong class="search-header__strong">9 990₽</strong> в сутки
+                </p>
+              </div>
+            </div>
+            <form action="#" class="search__form">
+              <div class="search__filter-date filter-date">
+                <div class="filter-date-dropdown filter-date-dropdown_before input__small input">
+                  <h3 class="input__label heading">прибытие</h3>
+                  <input class="dropdown input__date input__border text js-dropdown-date-before" value="ДД.ММ.ГГГГ"
+                    name="дата пребывания" readonly="readonly">
+                  <div class="filter-date__datepicker js-datepicker-date-before">
+                  </div>
+                </div>
+
+                <div class="filter-date-dropdown filter-date-dropdown_after input__small input">
+                  <h3 class="input__label heading">выезд</h3>
+                  <input class="dropdown input__date input__border text js-dropdown-date-after" value="ДД.ММ.ГГГГ"
+                    name="дата пребывания" readonly="readonly">
+                  <div class="filter-date__datepicker js-datepicker-date-after">
+                  </div>
+                </div>
+              </div>
+
+              <div class="search__guest input-guest guest input">
+                <h3 class="input__label heading">гости</h3>
+                <button class="dropdown input__border text js-dropdown-guest">
+                  <span class="js-guest-value">Cколько гостей</span>
+                  <span class="dropdown__icon"><svg width="13" height="8" viewbox="0 0 13 8" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                        fill="#1F2041" fill-opacity="0.5" />
+                    </svg></span>
+                </button>
+                <div class="guest__dropdown js-guest">
+                  <div class="guest__amount">
+                    <h3 class="guest__age heading">взрослые</h3>
+                    <div class="guest__option">
+                      <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus">-</button>
+                      <input class="guest__value heading" value="0" data-value="guest" readonly="readonly">
+                      <button class="guest__btn_right value__btn js-btn-plus">+</button>
+                    </div>
+                  </div>
+                  <div class="guest__amount">
+                    <h3 class="guest__age heading">дети</h3>
+                    <div class="guest__option">
+                      <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus"
+                        type="button">-</button>
+                      <input class="guest__value heading" value="0" data-value="guest" readonly="readonly">
+                      <button class="guest__btn_right value__btn js-btn-plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <div class="guest__amount">
+                    <h3 class="guest__age heading">младенцы</h3>
+                    <div class="guest__option">
+                      <button class="guest__btn_left value__btn value__btn_not-active js-btn-minus"
+                        type="button">-</button>
+                      <input class="guest__value heading" value="0" data-value="children" readonly="readonly">
+                      <button class="guest__btn_right value__btn js-btn-plus" type="button">+</button>
+                    </div>
+                  </div>
+
+                  <div class="guest__buttons">
+                    <button class="guest__clear heading btn__text js-clear btn__text_not-active">очистить</button>
+                    <button class="guest__apply heading btn__text js-apply">применить</button>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="search__list">
+                <li class="search__item search-item">
+                  <p class="search-item__left text">
+                    9 990₽ х 4 суток
+                  </p>
+                  <p class="search-item__right text">
+                    39 960₽
+                  </p>
+                </li>
+                <li class="search__item search-item">
+                  <p class="search-item__left search-item__left_icon text">
+                    Сбор за услуги: скидка 2 179₽
+                  </p>
+                  <p class="search-item__right text">
+                    0₽
+                  </p>
+                </li>
+                <li class="search__item search-item">
+                  <p class="search-item__left search-item__left_icon text">
+                    Сбор за дополнительные услуги
+                  </p>
+                  <p class="search-item__right text">
+                    300₽
+                  </p>
+                </li>
+              </ul>
+
+              <div class="search__sum">
+                <h2 class="search__sum_left subtitle">Итого</h2>
+                <h2 class="search__sum_right subtitle">38 081₽</h2>
+              </div>
+              <button class="search__btn btn btn__color btn__color_long heading">забронировать</button>
+            </form>
+          </div>
+
+          <div class="registration cards-block mb40">
+            <div class="registration__content">
+              <h1 class="registration__title title">Войти</h1>
+              <form action="#" class="registration__form">
+
+                <input type="email" name="email" placeholder="Email"
+                  class="input__text input__border text registration__input">
+
+                <input type="password" name="password" placeholder="Пароль"
+                  class="input__text input__border registration__input registration__input_margin text">
+
+                <button class="btn btn__color btn__color_long registration__btn heading">перейти к оплате</button>
+              </form>
+
+              <div class="registration__footer">
+                <p class="registration__text">Нет аккаунта на Toxin?</p>
+                <button class="btn btn__transparent heading">создать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="cards">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="cards__img img cards__img_1 swiper-slide">
+                  <img src="img/cards/1/1-1.jpg" alt="фотография отеля" class="cards__img">
+                </div>
+                <div class="cards__img img cards__img_2 swiper-slide" aria-hidden="true">
+                  <img src="img/cards/1/1-2.jpg" class="cards__img">
+                </div>
+                <div class="cards__img img cards__img_3 swiper-slide" aria-hidden="true">
+                  <img src="img/cards/1/1-3.jpg" class="cards__img">
+                </div>
+                <div class="cards__img img cards__img_4 swiper-slide" aria-hidden="true">
+                  <img src="img/cards/1/1-1.jpg" class="cards__img">
+                </div>
+              </div>
+              <div class="cards__nav swiper-pagination" aria-hidden="true"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="cards__content cards-content">
+              <div class="search__header cards__content_top">
+                <div class="search-header__left">
+                  <h2 class="search-header__title subtitle"><span class="search-header__num subtitle">№</span> 888</h2>
+                  <h3 class="search-header__heading heading">люкс</h3>
+                </div>
+                <div class="search-header__right">
+                  <p class="search-header__price text search-header__price_small">
+                    <strong class="search-header__strong ">9 990₽</strong> в сутки
+                  </p>
+                </div>
+              </div>
+
+              <div class="cards__content_botton">
+                <div class="search-header__left">
+                  <div class="rate-buttons__list">
+                    <input type="radio" name="rate1" id="rate1-5" class="rate-buttons__item" checked>
+                    <label for="rate1-5" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate1" id="rate1-4" class="rate-buttons__item">
+                    <label for="rate1-4" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate1" id="rate1-3" class="rate-buttons__item">
+                    <label for="rate1-3" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate1" id="rate1-2" class="rate-buttons__item">
+                    <label for="rate1-2" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate1" id="rate1-1" class="rate-buttons__item">
+                    <label for="rate1-1" class="rate-buttons__icon"></label>
+                  </div>
+                </div>
+                <div class="search-header__right">
+                  <p class="search-header__price text">
+                    <strong class="search-header__strong">145</strong> Отзывов
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="cards__img img cards__img_1 swiper-slide">
+                  <img src="img/cards/2/2-1.jpg" alt="фотография отеля" class="cards__img">
+                </div>
+                <div class="cards__img img cards__img_2 swiper-slide" aria-hidden="true">
+                  <img src="img/cards/2/2-1.jpg" class="cards__img">
+                </div>
+                <div class="cards__img img cards__img_3 swiper-slide" aria-hidden="true">
+                  <img src="img/cards/2/2-1.jpg" class="cards__img">
+                </div>
+                <div class="cards__img img cards__img_4 swiper-slide" aria-hidden="true">
+                  <img src="img/cards/2/2-1.jpg" class="cards__img">
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <div class="cards__nav swiper-pagination" aria-hidden="true"></div>
+            </div>
+            <div class="cards__content cards-content">
+              <div class="search__header cards__content_top">
+                <div class="search-header__left">
+                  <h2 class="search-header__title subtitle"><span class="search-header__num subtitle">№</span> 888</h2>
+                  <h3 class="search-header__heading heading"></h3>
+                </div>
+                <div class="search-header__right">
+                  <p class="search-header__price text search-header__price_small">
+                    <strong class="search-header__strong">9 990₽</strong> в сутки
+                  </p>
+                </div>
+              </div>
+
+              <div class="cards__content_botton">
+                <div class="search-header__left">
+                  <div class="rate-buttons__list">
+                    <input type="radio" name="rate2" id="rate2-5" class="rate-buttons__item">
+                    <label for="rate2-5" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate2" id="rate2-4" class="rate-buttons__item" checked>
+                    <label for="rate2-4" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate2" id="rate2-3" class="rate-buttons__item">
+                    <label for="rate2-3" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate2" id="rate2-2" class="rate-buttons__item">
+                    <label for="rate2-2" class="rate-buttons__icon"></label>
+                    <input type="radio" name="rate2" id="rate2-1" class="rate-buttons__item">
+                    <label for="rate2-1" class="rate-buttons__icon"></label>
+                  </div>
+                </div>
+                <div class="search-header__right">
+                  <p class="search-header__price text">
+                    <strong class="search-header__strong">65</strong> Отзывов
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container header__container">
+        <a href="https://crashmet.github.io/toxin/landing"><img src="img/header/Logo.svg" alt="Логотип" class="header__left logo"></a>
+        <div class="header__right">
+          <nav class="header__nav header-nav_string">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  О нас
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Услуги
+                  <span class="header__icon">
+                    <svg width="13" height="8" viewbox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                        fill="#1F2041" fill-opacity="0.5" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Вакансии
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Новости
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Соглашения
+                  <span class="header__icon">
+                    <svg width="13" height="8" viewbox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                        fill="#1F2041" fill-opacity="0.5" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn btn__transparent btn__transparent_header btn-header">
+            <a class="heading btn__transparent_text" href="https://crashmet.github.io/toxin/sign-in">войти</a>
+           </button>
+          <button class="btn btn__color btn__color_header btn-header heading">
+            <a class="heading btn__color_text" href="https://crashmet.github.io/toxin/sign-up">зарегистрироваться</a>
+          </button>
+          <div class="header__name text">Юлий Цезарь</div>
+          <button class="header__burger" id="burger" aria-label="Меню">
+            <svg width="27" height="20" viewbox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="27" height="3" fill="black" />
+              <rect y="8" width="27" height="3" fill="black" />
+              <rect y="16" width="27" height="3" fill="black" />
+            </svg>
+          </button>
+        </div>
+        <div class="header__menu header-menu" id="menu">
+          <button class="header-menu__none" id="none_menu" aria-label="закрыть-меню">
+            <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                fill="#333333" />
+              <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+          </button>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  О нас
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Услуги
+                  <span class="header__icon">
+                    <svg width="13" height="8" viewbox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                        fill="#1F2041" fill-opacity="0.5" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Вакансии
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Новости
+                </a>
+              </li>
+              <li class="header__item">
+                <a href="" class="header__link text">
+                  Соглашения
+                  <span class="header__icon">
+                    <svg width="13" height="8" viewbox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.3301 0.578125L12.7363 1.98438L6.73633 7.98438L0.736328 1.98438L2.14258 0.578125L6.73633 5.17188L11.3301 0.578125Z"
+                        fill="#1F2041" fill-opacity="0.5" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn btn__transparent btn__transparent_header btn-header-menu heading"><a class="heading btn__transparent_text" href="https://crashmet.github.io/toxin/sign-in">войти</a></button>
+          <button class="btn btn__color btn__color_header  btn-header-menu heading"><a class="heading btn__color_text" href="https://crashmet.github.io/toxin/sign-up">зарегистрироваться</a></button>
+        </div>
+      </div>
+    </header>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container footer__container">
+          <div class="row">
+            <div class="foooter__left footer-left col-3">
+              <a class="footer-left__logo" href="https://crashmet.github.io/toxin/landing"><img src="img/footer/Logo.svg" alt="Логотип" class="footer-left__logo logo"></a>
+              <p class="footer-left__text text ">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
+                «Отельные взгляды»</p>
+            </div>
+            <nav class="footer__nav footer-nav col-2">
+              <h3 class="footer-nav__title heading">
+                навигация
+              </h3>
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    О нас
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Новости
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Служба поддержки
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Услуги
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="footer__nav footer-nav col-2">
+              <h3 class="footer-nav__title heading">
+                о нас
+              </h3>
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    О сервисе
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Наша команда
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Вакансии
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Инвесторы
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="footer__nav footer-nav col-2">
+              <h3 class="footer-nav__title heading">
+                Служба поддержки
+              </h3>
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Соглашения
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Сообщества
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" class="footer-nav__link text">
+                    Связь с нами
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="footer__right footer-right col-3">
+              <h3 class="footer-nav__title heading">
+                Подписка
+              </h3>
+              <div class="footer-right__label text">Получайте специальные предложения и новости сервиса</div>
+              <form action="#" autocomplete class="input-subscription__form footer-right__form ">
+                <input type="email" name="email" placeholder="Email"
+                  class="input__text input__border input__email_icon text">
+                <button class="input__email_icon"></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container footer__container">
+        <div class="footer__bottom footer-bottom ">
+          <a class="footer-bottom__logo" href="https://crashmet.github.io/toxin/landing"><img src="img/footer/Logo.svg" alt="Логотип" class="footer-bottom__logo logo"></a>
+          <small class="footer-bottom__copyrights text">
+            Copyright © 2018 Toxin отель. Все права защищены.
+          </small>
+          <ul class="footer-bottom-list">
+            <li class="footer-bottom__item">
+              <a href="" class="footer-bottom__link">
+                <span class="footer-bottom__icon footer-bottom__icon-twit"></span>
+              </a>
+            </li>
+            <li class="footer-bottom__item">
+              <a href="" class="footer-bottom__link">
+                <span class="footer-bottom__icon footer-bottom__icon-fb"></span>
+              </a>
+            </li>
+            <li class="footer-bottom__item">
+              <a href="" class="footer-bottom__link">
+                <span class="footer-bottom__icon footer-bottom__icon-inst"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
