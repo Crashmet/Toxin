@@ -363,7 +363,7 @@ button {
 
 .input-date__datepicker,
 .filter-date__datepicker {
-
+  /* display: none; */
   position: absolute;
   top: 110%;
   opacity: 0;
@@ -382,6 +382,7 @@ button {
 .filter-date__datepicker.visible {
   opacity: 1;
   transition: opacity 0.5s ease-in;
+  /* display: inline; */
 }
 
 .filter-date-dropdown::after,
@@ -1918,9 +1919,9 @@ button {
   min-height: 683px;
 }
 
-.sign-in__cards {
+/* .sign-in__cards {
   max-height: 358px;
-}
+} */
 
 
 /* header-menu */
@@ -1943,8 +1944,6 @@ button {
   left: 0px;
   top: 0px;
   padding: 30px 40px;
-  min-width: 200px;
-  min-height: 300px;
   background: #FFFFFF;
   box-shadow: 0px 5px 40px var(--dark-shade-10);
   border-radius: 5px 5px 32px 32px;
@@ -2145,3 +2144,77 @@ button {
   }
 }
 
+@media (max-width: 460px) {
+
+  .cards-block {
+    width: auto;
+  }
+
+  .btn__color_long{
+    padding: 0 40px;
+    width: auto;
+  }
+
+  .footer-bottom__copyrights{
+    text-align: center;
+  }
+
+  .room-comments__title{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search {
+    max-height: none;
+  }
+
+  .search__header{
+    flex-direction: column;
+  }
+
+  .search-item{
+    flex-direction: column;
+  }
+
+  .search-item__left_icon::after {
+    right: 5%;
+    top: 50%;
+  }
+
+  .search-cards__pagination{
+    bottom: 1.5%;
+    right: 20%;
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  .search-cards__pagination{
+    bottom: 1.5%;
+    right: 10%;
+  }
+
+  .toggle__checkbox:checked+label::before {
+    top: 10.1%;
+  }
+}
+
+@media (max-width: 270px) {
+  .guest__amount, .guest__buttons{
+    flex-direction: column;
+  }
+
+  .guest__clear, .guest__age, .guest__amount {
+    margin-bottom: 9px;
+  }
+
+  .registration__text{
+    margin-bottom: 10px;
+  }
+  .registration__footer{
+    flex-direction: column;
+  }
+
+
+}
