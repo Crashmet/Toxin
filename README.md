@@ -4,7 +4,7 @@
 
 [Landing](https://crashmet.github.io/toxin/landing)
 
-[Search-room](https://crashmet.github.io/toxinsearch-room)
+[Search-room](https://crashmet.github.io/toxin/search-room)
 
 [Room](https://crashmet.github.io/toxin/room)
 
