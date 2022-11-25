@@ -1843,6 +1843,10 @@ button {
   margin-bottom: 12px;
 }
 
+.room__content{
+  margin-right: 30px;
+}
+
 .room__subtitle {
   margin-bottom: 20px;
 }
@@ -1968,6 +1972,16 @@ button {
   display: none;
 }
 
+@media (max-width: 1200px) {
+  .search-cards__list{
+    /* width: 70%; */
+    max-width: 664px;
+  }
+
+  .search-room__container{
+    justify-content: space-evenly;
+  }
+}
 
 @media (max-width: 980px) {
 
@@ -2052,10 +2066,13 @@ button {
 }
 
 @media (max-width: 852px) {
-
   .search-cards__pagination{
     bottom: 1.5%;
     right: 52%;
+  }
+
+  .search-cards__title{
+    max-width: 300px;
   }
 
 }
@@ -2152,7 +2169,7 @@ button {
 
   .btn__color_long{
     padding: 0 40px;
-    width: auto;
+    width: 100%;
   }
 
   .footer-bottom__copyrights{
@@ -2165,6 +2182,7 @@ button {
   }
 
   .search {
+    max-width: 385px;
     max-height: none;
   }
 
@@ -2189,6 +2207,21 @@ button {
 }
 
 @media (max-width: 360px) {
+  .air-datepicker{
+    display: none;
+  }
+
+  .room__info_right{
+    display: none;
+  }
+
+  .search__sum_right::before{
+    display: none;
+  }
+
+  .room-comments{
+    margin-bottom: 50px;
+  }
 
   .search-cards__pagination{
     bottom: 1.5%;
@@ -2205,9 +2238,9 @@ button {
     flex-direction: column;
   }
 
-  .guest__clear, .guest__age, .guest__amount {
+  /* .guest__clear, .guest__age, .guest__amount {
     margin-bottom: 9px;
-  }
+  } */
 
   .registration__text{
     margin-bottom: 10px;
@@ -2216,5 +2249,50 @@ button {
     flex-direction: column;
   }
 
+  .header-menu{
+    width: 100%;
+  }
+
+  .btn-header-menu{
+    width: 100%;
+    height: 34px;
+  }
+
+  .btn__color_long{
+    height: 34px;
+  }
+
+  .heading{
+    font-size: 8px;
+  }
+
+  .text{
+    font-size: 8px;
+  }
+
+  .title{
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .subtitle{
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .registration__text {
+    font-size: 8px;
+  }
+  .input__border{
+    height: 34px;
+  }
+
+  .registration__btn {
+    margin-bottom: 10px;
+  }
+
+  .toggle__checkbox:checked+label::before {
+    top: 30%;
+  }
 
 }

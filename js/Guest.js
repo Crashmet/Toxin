@@ -58,6 +58,7 @@ document.querySelector('.js-guest').addEventListener('click', function (e) {
         guestValue += Number(values.value);
       }
     };
+
     document.querySelectorAll('.js-guest-value').forEach(function(el){
       if (guestValue == 1){
         el.textContent = guestValue + ' ' + 'гость';
@@ -69,6 +70,9 @@ document.querySelector('.js-guest').addEventListener('click', function (e) {
       }
 
     })
+
+    document.querySelector('.js-dropdown-guest').classList.remove('open')
+    document.querySelector('.js-guest').classList.remove('visible')
   };
 });
 
