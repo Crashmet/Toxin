@@ -2,19 +2,19 @@
 
 # Демо
 
-[Landing](https://crashmet.github.io/Toxin/landing)
+[Landing](https://crashmet.github.io/toxin/landing)
 
-[Search-room](https://crashmet.github.io/Toxin/search-room)
+[Search-room](https://crashmet.github.io/toxin/search-room)
 
-[Room](https://crashmet.github.io/Toxin/room)
+[Room](https://crashmet.github.io/toxin/room)
 
-[Sign-up](https://crashmet.github.io/Toxin/sign-up)
+[Sign-up](https://crashmet.github.io/toxin/sign-up)
 
-[Sign-in](https://crashmet.github.io/Toxin/sign-in)
+[Sign-in](https://crashmet.github.io/toxin/sign-in)
 
 # Ul Kit
 
-[Form Elements & Cards & Headers & Footers](https://crashmet.github.io/Toxin/ui-kit)
+[Form Elements & Cards & Headers & Footers](https://crashmet.github.io/toxin/ui-kit)
 
 
 
